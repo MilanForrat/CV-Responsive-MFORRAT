@@ -266,7 +266,7 @@ section{
         border-radius: 7px;
         padding: 20px 25px;
         position: relative;
-        box-shadow: 0 1px 6px rgba(0,0,0, 0.175);
+        box-shadow: 0 1px 6px rgba(0,0,0, 0.800);
         background-color: rgba(255, 255, 255, 0.9);
     }
     .timeline li .timeline-badge{
@@ -281,6 +281,7 @@ section{
         top: 25px;
         left: -25px;
         z-index: 1;
+        box-shadow: 0 1px 6px rgba(0,0,0, 0.800);
     }
     
 }
@@ -297,12 +298,13 @@ section{
         margin-left: -25px;
         background-color: rgba(255, 255, 255, 0.9);
         border-radius: 50%;
-         }   
-        .timeline{
+        box-shadow: 0 1px 6px rgba(0,0,0, 0.800);
+    }   
+    .timeline{
             padding:30px 10px;
             position: relative;
-        }
-        .timeline::before{
+    }
+    .timeline::before{
             top:0;
             bottom: 0;
             position: absolute;
@@ -313,28 +315,28 @@ section{
             margin-left: -2.5px;
             border: 1px solid #333;
             border-radius: 5px;
-        }
-        .timeline > li{
+    }
+    .timeline > li{
             margin-bottom: 20px;
             position: relative;
-        }
-        .timeline >li::after{
+    }
+    .timeline >li::after{
             clear:both;
-        }
-        .timeline>li::before, .timeline >li:after{
+    }
+    .timeline>li::before, .timeline >li:after{
             content: " ";
             display: table;
-        }
+    }
 
-        .timeline-panel-container{
+    .timeline-panel-container{
             width: 50%;
             float: left;
-        }
-        .timeline-panel-container-inverted{
+    }
+    .timeline-panel-container-inverted{
             width: 50%;
             float: right;
-        }
-        .timeline-panel{
+    }
+    .timeline-panel{
             width: 90%;
             float: right;
             margin-right: 40px;
@@ -342,14 +344,14 @@ section{
             border-radius: 7px;
             padding: 20px 25px;
             position: relative;
-            box-shadow: 0 1px 6px rgba(0,0,0, 0.175);
+            box-shadow: 0 1px 6px rgba(0,0,0, 0.800);
             background-color: rgba(255, 255, 255, 0.9);
-        }
-        .timeline-panel-container-inverted .timeline-panel{
+    }
+    .timeline-panel-container-inverted .timeline-panel{
             float:left;
             margin-left: 40px;
-        }
-        .timeline-panel::after{
+    }
+    .timeline-panel::after{
             position: absolute;
             top: 27px;
             right: -14px;
@@ -359,13 +361,13 @@ section{
             border-right: 0 solid #fff;
             border-bottom: 14px solid transparent;
             content: " ";
-        }
-        .timeline-panel-container-inverted .timeline-panel::after{
+    }
+    .timeline-panel-container-inverted .timeline-panel::after{
         border-left-width: 0;
         border-right-width: 14px;
         left: -14px;
         right: auto;
-        }
+    }
 }
 
 /* EDUCATION */
@@ -468,7 +470,9 @@ section{
     text-decoration: none;
     color: #000;
     font-style: italic;
-    
+}
+#recommandations .small_italic{
+    font-style: italic;
 }
 @media only screen and (min-width: 768px) {
     #plus_one{
@@ -514,6 +518,8 @@ section{
     }
     #myCarousel .carousel-item h3{
         color: #d82c2e;
+        font-size: 1.2rem;
+        transition: 0.5s;
     }
     .carousel-control-prev, .carousel-control-next{
         background-image: none;
@@ -531,12 +537,13 @@ section{
         font-weight: bold;
     }
     #recommandations a{
-        font-size: 1.2rem;
+        font-size: 1rem;
         transition: 0.5s;
     }
     #recommandations a:hover{
-        font-weight: bold;
-        color: #d82c2e;
+        font-size: 1.2rem;
+    }
+    #recommandations h3:hover{
         font-size: 1.3rem;
     }
 }
