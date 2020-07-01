@@ -16,7 +16,7 @@
     </head>
 
   <body data-spy="scroll" data-target=".navbar" data-offset="60">
-      <header>
+    <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top">
             <a class="navbar-brand" href="#"></a>
     
@@ -31,11 +31,9 @@
                         <li class="nav-item"><a class="nav-link" href="#experience">Expériences</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#recommandations">Recommandations</a></li>
-                        <!-- <li class="nav-audio"><audio controls preload="auto" src="./Projets/CV-Milan-FORRAT/audio/DJ Démoniack - Indecisive (15'min Slow-Trap Mix).MP3">audio</audio></li> -->
                     </ul>
                 </div>
-          </nav>
-          <p class="audio" ><audio controls preload="auto" type="audio/mp3" src="./Projets/CV-Milan-FORRAT/audio/DJ Démoniack - Indecisive (15'min Slow-Trap Mix).MP3">Votre navigateur ne supporte pas l'élément audio.</audio></p>
+        </nav>
     </header>
     
         <!-- SECTION 1 - Description -->
@@ -54,11 +52,13 @@
             </div>
             <div class="social">
                 <ul class="list_social">
-                    <li><a id="email" href="#"><span class="fas fa-at"></span></a></li>
-                    <li><a id="linkedIn" href="https://www.linkedin.com/in/milan-forrat-09043925/"  target="blank"><span class="fab fa-linkedin"></span></a></li>
-                    <li><a href="#" id="call_phone"><i class="fas fa-phone"></i></a></li>
+                    <li><a id="email" href="#"><span id="email_logo" class="fas fa-at"></span></a></li>
+                    <li><a id="github" href="https://github.com/MilanForrat" target="blank"><i id="github_logo" class="fab fa-github"></i></a></li>
+                    <li><a id="linkedIn" href="https://www.linkedin.com/in/milan-forrat-09043925/"  target="blank"><span id="linkedIn_logo" class="fab fa-linkedin"></span></a></li>
+                    <li><a id="call_phone" href="#"><i id="call_phone_logo" class="fas fa-phone"></i></a></li>
                 </ul>
-                <p id="call_phone_style">  </p>
+                <p id="call_phone_style">+33(0)6 14 22 29 86</p>
+                <p id="github_legend">Afficher mon profil GitHub</p>
                 <p id="email_style">milan.forrat@gmail.com</p>
                 <p id="call_phone_legend">Afficher mon numéro de téléphone</p>
                 <p id="email_legend">Afficher mon mail</p>
@@ -70,7 +70,7 @@
         </section>
         <!-- SECTION 2 - les compétences -->
         <section id="skills">
-            <div class="red-divider"></div>
+            <div class="red-divider_mid"></div>
             <div class="heading">
                 <h2>Compétences</h2>
             </div>
@@ -126,7 +126,7 @@
             </article>
         </section>
             <!-- EDUCATION -->
-            <div class="red-divider"></div>
+            <div class="red-divider_mid"></div>
 
             <section id="education">
                 <div class="heading">
@@ -141,11 +141,11 @@
                                     </span> Lyon (69), France </small> <small class="far fa-clock"> 2020</small>
                                 </h5>
                                 <i class="fas fa-graduation-cap"></i>
-                                <h3>O’Clock Ecole de Dév’</h3>
+                                <h3><a target="blank" href="https://oclock.io/formations/developpeur-web">O’Clock Ecole de Dév'</a></h3>
                                 <h4>Formation Développeur Web et Web Mobile</h4>
-                                <div class="red-divider"></div>
+                                <div class="red-divider_mid"></div>
                                 <p>HTML/CSS, Bootstrap, JavaScript, PHP, MySQL, Responsive Design</p>
-                                <p>Titre de Développeur Web et Web Mobile (+ lien formation)</p>
+                                <p>Titre de Développeur Web et Web Mobile</p>                              
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-4">
@@ -155,11 +155,11 @@
                                     </span> Lyon (69), France </small> <small class="far fa-clock"> 2020</small>
                                 </h5>
                                 <i class="fas fa-graduation-cap"></i>
-                                <h3>Udemy</h3>
+                                <h3><a target="blank" href="https://www.udemy.com/course/formation-developpeur-web/">Udemy</a></h3>
                                 <h4>Formation Online : Développeur Web</h4>
-                                <div class="red-divider"></div>
+                                <div class="red-divider_mid"></div>
                                 <p>HTML/CSS, Bootstrap, JavaScript, PHP, MySQL, Responsive, Mise en Ligne des sites</p>
-                                <p>Certificat de formation (+ lien formation)</p>
+                                <p>Certificat de formation</p>                                
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-4">
@@ -169,11 +169,11 @@
                                     </span> Lyon (69), France </small> <small class="far fa-clock"> 2020</small>
                                 </h5>
                                 <i class="fas fa-graduation-cap"></i>
-                                <h3>Udemy</h3>
+                                <h3><a target="blank" href="https://www.udemy.com/course/hacking-ethique-securite-web/">Udemy</a></h3>
                                 <h4>Formation Online Hacking Éthique : <span class="small-h4">Tests d'Intrusion et Sécurité Web</span></h4>
-                                <div class="red-divider"></div>
+                                <div class="red-divider_mid"></div>
                                 <p>Sécurisation des sites contre les failles web (website penetration testing), intruisition MySQL, mise en place de tests de fiabilité</p>
-                                <p>Certificat de formation (+ lien formation)</p>
+                                <p>Certificat de formation</p>
                             </div>
                         </div>
                        <!-- METTRE UN BOUTON autres formations ? -->
@@ -184,9 +184,9 @@
                                     </span> Grenoble (38), France </small> <small class="far fa-clock"> 2019</small>
                                 </h5>
                                 <i class="fas fa-graduation-cap"></i>
-                                <h3>CNPC Ecole de Commerce du Sport</h3>
+                                <h3><a target="blank" href="https://www.cnpc.fr/">CNPC Ecole de Commerce du Sport</a></h3>
                                 <h4>CQP Technicien Cycle</h4>
-                                <div class="red-divider"></div>
+                                <div class="red-divider_mid"></div>
                                 <p>Formation qualifiante en commerce et mécanique du cycle</p>
                             </div>
                         </div>
@@ -197,9 +197,9 @@
                                     </span> Châteaulin (29), France </small> <small class="far fa-clock"> 2014</small>
                                 </h5>
                                 <i class="fas fa-graduation-cap"></i>
-                                <h3>Ecole des Sous-Officiers Gendarmerie Nationale</h3>
+                                <h3><a target="blank" href="https://www.gendarmerie.interieur.gouv.fr/cegn/Autres-pages/Ecoles/Ecole-de-gendarmerie-de-Chateaulin">Ecole des Sous-Officiers Gendarmerie Nationale</a></h3>
                                 <h4>Certificat d’Aptitude Gendarmerie</h4>
-                                <div class="red-divider"></div>
+                                <div class="red-divider_mid"></div>
                                 <p>Formation sous-officier de Gendarmerie</p>
                                 <p>Spécialité Gendarmerie Mobile</p>
                             </div>
@@ -211,9 +211,9 @@
                                     </span> Bangkok, Thaïlande </small> <small class="far fa-clock"> 2012</small>
                                 </h5>
                                 <i class="fas fa-graduation-cap"></i>
-                                <h3>LFIB(lien) et FASNY(lien)</h3>  
+                                <h3><a href="https://www.lfib.ac.th/" target="blank">LFIB</a> et <a href="https://www.fasny.org/" target="blank">FASNY</a></h3>  
                                 <h4>Baccalauréat <span class="small-h4">(Economique et Social)</span></h4>
-                                <div class="red-divider"></div>
+                                <div class="red-divider_mid"></div>
                                 <p>Diplôme obtenu à la suite d’un cursus scolaire international de 10 ans à la French American School Of New York (FASNY) et au Lycée Français International de Bangkok (LFIB)</p>
                             </div>
                         </div> 
@@ -233,7 +233,7 @@
                         <div class="timeline-panel-container">
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h3>ProbikeShop</h3>
+                                    <h3><a target="blank" href="https://www.probikeshop.fr/">ProbikeShop</a></h3>
                                     <h4>Technicien Cycle et Opérateur BackOffice</h4>
                                     <p class="text-muted"><small><span class="material-icons">
                                         room
@@ -260,7 +260,7 @@
                         <div class="timeline-panel-container-inverted">  <!-- Inverted pour passer le bloc de l'autre côté-->
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h3>LVM Livraison Montréal</h3>
+                                    <h3><a target="blank" href="https://www.livraisonvelomontreal.com/">LVM Livraison Montréal</a></h3>
                                     <h4>Technicien Cycle</h4>
                                     <p class="text-muted"><small><span class="material-icons">
                                         room
@@ -286,7 +286,7 @@
                         <div class="timeline-panel-container">
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h3>Gendarmerie Nationale</h3>
+                                    <h3><a target="blank" href="https://www.gendarmerie.interieur.gouv.fr/">Gendarmerie Nationale</a></h3>
                                     <h4>Sous-Officier, Gendarmerie Mobile, Peloton d’Intervention</h4>
                                     <p class="text-muted"><small><span class="material-icons">
                                         room
@@ -317,7 +317,7 @@
                         <div class="timeline-panel-container-inverted">
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h3>SATELC, Société d’Aménagement Touristique et d’Exploitation de La Clusaz</h3>
+                                    <h3><a target="blank" href="https://forfait.laclusaz.com/fr/">SATELC, Société d’Aménagement Touristique et d’Exploitation de La Clusaz</a></h3>
                                     <h4>Agent d’Exploitation des Remontées Mécaniques</h4>
                                     <p class="text-muted"><small><span class="material-icons">
                                         room
@@ -347,7 +347,7 @@
         <!-- PORTFOLIO -->
         <section id="portfolio">
             <div class="container">
-                <div class="red-divider"></div>
+              <div class="red-divider_mid"></div>
                 <div class="heading">
                     <h2>PortFolio</h2>
                 </div>
@@ -373,7 +373,7 @@
         <!-- RECOMMANDATIONS -->
         <section id="recommandations">
             <article class="container">
-                <div class="red-divider"></div>
+                <div class="red-divider_mid"></div>
                 <div class="heading">
                     <h2>Recommandations <span id="plus_one" class="material-icons">
                         plus_one
@@ -388,23 +388,25 @@
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
                             <h3>"(..) rigoureux et respecte les processus de production (..)"<small class="small_italic">- ProbikeShop</small></h3>
-                            <h4><a href="./Projets/CV-Milan-FORRAT/docs/Lettre de recommandation - M FORRAT -  Probikeshop.pdf" target="blank"><span class="material-icons">
+                            <h4><a class="recommandation_link"  href="./Projets/CV-Milan-FORRAT/docs/Lettre de recommandation - M FORRAT -  Probikeshop.pdf" target="blank"><span class="material-icons">
                                 add_circle_outline
                                 </span>Télécharger la lettre</a></h4>
                         </div>
                         <div class="carousel-item">
                             <h3>"(..) il démontre dès que l'occasion lui en est donnée une faculté d'adaptation avérée."<small class="small_italic">- Gendarmerie</small></h3>
-                            <h4><a href="./Projets/CV-Milan-FORRAT/docs/Lettre de recommandation - M FORRAT - Gendarmerie Nationale.pdf" target="blank"><span class="material-icons">
+                            <h4><a class="recommandation_link" href="./Projets/CV-Milan-FORRAT/docs/Lettre de recommandation - M FORRAT - Gendarmerie Nationale.pdf" target="blank"><span class="material-icons">
                                 add_circle_outline
                                 </span>Télécharger la lettre</a></h4>
                         </div>
                         <div class="carousel-item">
                             <h3>"(..) Milan possesses the determination and will that has allowed him to gain experience (..)"<small class="small_italic">- LED Club</small></h3>
-                            <h4><a href="./Projets/CV-Milan-FORRAT/docs/Letter of recommendation - LED Club Bangkok.pdf" target="blank"><span class="material-icons">
+                            <h4><a class="recommandation_link"  href="./Projets/CV-Milan-FORRAT/docs/Letter of recommendation - LED Club Bangkok.pdf" target="blank"><span class="material-icons">
                                 add_circle_outline
                                 </span>Télécharger la lettre</a></h4>
                         </div>
                     </div>
+                    <br>
+                    <br>
                     <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
                         <span class="fas fa-chevron-left fa-2x"></span>
                       </a>

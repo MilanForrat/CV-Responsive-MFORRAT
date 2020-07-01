@@ -30,5 +30,18 @@ $(function(){
     $("#add_cv").mouseleave(function(){
         $("#add_cv_legend").css('display','none');
     });
+    $("#audio_logo").click(function(){
+        $("#audio_description").css('display','flex');
+    });
+    $("#github").mouseenter(function(){
+        $("#github_legend").css('display','inline-block');
+    });
+    $("#github").mouseleave(function(){
+        $("#github_legend").css('display','inline-block');
+    });
 });
+
+
+
+
 
