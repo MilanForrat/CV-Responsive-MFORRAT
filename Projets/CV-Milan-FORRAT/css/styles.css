@@ -86,9 +86,22 @@ header{
     border-radius: 50%;
     text-decoration: none;
     color: #d82c2e;
+    transition: 0.5s;
 }
 .list_social a:hover{
     box-shadow: 0px 0px 10px 5px white;
+}
+#github{
+    transition: 0.5s;
+}
+#email{
+    transition: 0.5s;
+}
+#linkedIn{
+    transition: 0.5s;
+}
+#call_phone{
+    transition: 0.5s;
 }
 #github_logo{
     position: relative;
@@ -107,12 +120,12 @@ header{
     top: 2px;
 }
 #github_legend{
-    display:none;
     font-style: italic;
     text-align: center;
     color: white;
     font-size: 0.8rem;
     margin-bottom: 0;
+    display: none;
 }
 #email_style{
     text-align: center;
@@ -141,36 +154,36 @@ header{
     margin-bottom: 0;
 }
 #call_phone_legend{
-    display:none;
     font-style: italic;
     text-align: center;
     color: white;
     font-size: 0.8rem;
     margin-bottom: 0;
+    display: none;
 }
 #linkedIn_legend{
-    display:none;
     font-style: italic;
     text-align: center;
     color: white;
     font-size: 0.8rem;
     margin-bottom: 0;
+    display: none;
 }
 #email_legend{
-    display:none;
     font-style: italic;
     text-align: center;
     color: white;
     font-size: 0.8rem;
     margin-bottom: 0;
+    display: none;
 }
 #add_cv_legend{
-    display:none;
     font-style: italic;
     text-align: center;
     color: white;
     font-size: 0.8rem;
     margin-bottom: 0;
+    display: none;
 }
 /* DESCRIPTION */
 #about .thumbnail{
@@ -283,6 +296,13 @@ header{
 .timeline-heading h3{
     margin-top: 5px;
     font-size: 20px;
+}
+.timeline h3 a{
+    text-decoration: none;
+    color: black;
+}
+.timeline h3 a:hover{
+    text-decoration: underline black;
 }
 .timeline-heading h4{
     color: #d82c2e;
@@ -407,6 +427,14 @@ header{
 #education{
     background: #ffffff;
 }
+#education  .link_formation{
+    text-decoration: none;
+    margin-top: 15px;
+    font-weight: bold;
+    font-style: italic;
+    color: black;
+    font-size: 1rem;
+}
 #education .material-icons{
     font-size: 0.8rem;
 }
@@ -422,6 +450,9 @@ header{
 #education .heading h2{
     color: #d82c2e;
     text-shadow: 0.5px 0.5px 0.5px #000000;
+}
+#education .red-divider_mid{
+    margin-bottom: 20px;
 }
 .education-block{
     width: 80%;
@@ -440,6 +471,15 @@ header{
 }
 .education-block h3{
     color: #d82c2e;
+}
+.education-block h3 a{
+    color: #d82c2e;
+    text-decoration: none;
+}
+.education-block h3 a:hover{
+    color: #d82c2e;
+    text-decoration: none;
+    text-decoration: underline black;
 }
 .education-block h4{
     margin-bottom: 20px;
@@ -559,7 +599,6 @@ header{
         font-size: 1.2rem;
         transition: 0.5s;
     }
-
     #recommandations .bi{
         margin-left: 0.5rem;
         position: relative;
@@ -571,11 +610,9 @@ header{
         font-size: 1rem;
         transition: 0.5s;
     }
-    #recommandations a:hover{
+    #recommandations .recommandation_link:hover{
+        text-decoration: underline black;
         font-size: 1.2rem;
-    }
-    #recommandations h3:hover{
-        font-size: 1.3rem;
     }
 }
 @media only screen and (max-width: 768px) {
