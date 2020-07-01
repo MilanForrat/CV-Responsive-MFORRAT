@@ -30,31 +30,15 @@ $(function(){
     $("#add_cv").mouseleave(function(){
         $("#add_cv_legend").css('display','none');
     });
-    $("#audio_logo").click(function(){
-        $("#audio_description").css('display','flex');
-    });
-    /*$("#audio_show").click(function(){
-        $("#audio").css('display','none');
-    });*/
     $("#github").mouseenter(function(){
         $("#github_legend").css('display','inline-block');
     });
     $("#github").mouseleave(function(){
-        $("#github_legend").css('display','none');
+        $("#github_legend").css('display','inline-block');
     });
 });
 
- setTimeout('$("#audio_description").hide()',8500);
-
-function showAudio(){
-    let elem = document.getElementById("audio");
-    elem.classList.toggle("active_audio");
-}
 
 
-//let audio = document.getElementById('audio');
-/* function hide(elem) {
-    elem.classList.toggle('audio');
-}*/
 
 
