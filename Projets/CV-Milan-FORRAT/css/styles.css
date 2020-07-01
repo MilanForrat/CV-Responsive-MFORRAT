@@ -25,15 +25,16 @@ section .heading{
 section .heading h2{
     text-transform: uppercase;
 }
-.red-divider{
+.red-divider_mid{
     width: 100px;
     height: 2px;
     background: #d82c2e;
     margin: 0 auto;
     border: 1px solid #d82c2e;
     border-radius: 5px;
+    margin-bottom: 45px;
 }
-.white-divider{
+.white-divider_mid{
     width: 100px;
     height: 2px;
     background: #ffffff;
@@ -68,18 +69,107 @@ header{
     color: #fff !important;
     border-style: none;
 }
-.audio{
-width: 40%;
-display: flex;
-justify-content: flex-end;
-position: fixed;
-top: 40px;
-right: 15px;
+/* AUDIO */
+#audio_show_div{
+    display: flex;
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 40px;
+    right: 15px;
+    z-index:1;
 }
+#audio{
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 40px;
+    right: 15px;
+    z-index:1;
+}
+.active_audio{
+    display: none;
+}
+#audio_show{
+    position: relative;
+    margin-top: 11px;
+    font-size: 1.25rem;
+    color: black;
+    left: 5px;
+}
+#audio_logo{
+    position: relative;
+    top: 33px;
+    font-size: 1.5rem;
+    color: black;
+    left: 5px;
+}
+#audio_hand_logo{
+    position: relative;
+    top:1px;
+    font-size: 1rem;
+    margin-right: 2px;
+}
+#audio_hover{
+    display: none;
+    width: 40%;
+    justify-content: flex-end;
+    position: fixed;
+    top: 75px;
+    left: 85%;
+    color: black;
+    font-size: 0.9rem;
+    font-style: italic;
+    z-index: 1;
+}
+#audio_description{
+    width: 40%;
+    display: none;
+    justify-content: flex-end;
+    position: fixed;
+    top: 95px;
+    right: 5px;
+    text-decoration: none;
+    color: black;
+    font-size: 0.9rem;
+    font-style: italic;
+    z-index: 1;
+    }
+@media only screen and (max-width: 768px) {    
+    #audio_description{
+        width: 25%;
+        right: 5px;
+        display: none;
+        justify-content: flex-end;
+        position: fixed;
+        top: 95px;
+        z-index:1;
+        text-decoration: none;
+        color: black;
+        font-size: 0.8rem;
+        font-style: italic;
+        }
+        #audio{
+        width: 80%;
+        display: flex;
+        justify-content: flex-end;
+        position: fixed;
+        top: 40px;
+        right: 15px;
+        z-index:1;
+    }
+}    
 /* SOCIAL ELEMENTS */
+.list_social{
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+}
 .list_social li{
     display: inline;
-    margin-right: 8px;
+    margin: 0px 4px 0px 4px ;
 }
 .list_social a{
     font-size: 2rem;
@@ -92,9 +182,29 @@ right: 15px;
 .list_social a:hover{
     box-shadow: 0px 0px 10px 5px white;
 }
-.list_social .fa-at{
+#github_logo{
     position: relative;
-    top: 1px;
+    top: 2px;
+}
+#email_logo{
+    position: relative;
+    top: 2px;
+}
+#linkedIn_logo{
+    position: relative;
+    top: 2px;
+}
+#call_phone_logo{
+    position: relative;
+    top: 2px;
+}
+#github_legend{
+    display:none;
+    font-style: italic;
+    text-align: center;
+    color: white;
+    font-size: 0.8rem;
+    margin-bottom: 0;
 }
 #email_style{
     text-align: center;
@@ -159,11 +269,16 @@ right: 15px;
     border-radius: 20px;
     box-shadow: 0px 0px 12px 2px black;
 }
+@media only screen and (max-width: 768px) {   
+    #about .thumbnail{
+        margin-top: 20px;
+    }
+}
 #about{
     padding-top: 100px;
     background: #d82c2e;
-    text-align: center;
     box-sizing: border-box;
+    text-align: center;
 }
 .profile-picture{
     text-align: center;
@@ -215,12 +330,11 @@ right: 15px;
     margin-left: 0.5rem;
 }
 #skills{
-    background: #fff;
+    background: #ffffff;
     padding-bottom: 45px;
 }
 #skills .heading h2{
     color: #d82c2e;
-    margin-top: 30px;
     text-shadow: 0.5px 0.5px 0.5px #000000;
 }
 .progress{
@@ -383,7 +497,7 @@ right: 15px;
 
 /* EDUCATION */
 #education{
-    background: #fff;
+    background: #ffffff;
 }
 #education .material-icons{
     font-size: 0.8rem;
@@ -441,11 +555,13 @@ right: 15px;
     text-shadow: 0.5px 0.5px 0.5px #000000;
     color: #d82c2e;
 }
+#portfolio{
+    background-color: #ffffff;
+}
 
 @media only screen and (max-width: 992px){
     #portfolio {
-        background-color: #fff;
-        padding: 45px 0;
+        padding: 45px 0 0 0;
     }
     #portfolio .heading h2{
         color: #d82c2e;
@@ -482,6 +598,9 @@ right: 15px;
     color: #000;
     font-style: italic;
 }
+#recommandations{
+    background: #ffffff;
+}
 #recommandations .small_italic{
     font-style: italic;
 }
@@ -502,7 +621,7 @@ right: 15px;
     margin-bottom: 45px;
     }
     #recommandations{
-        background: #fff;
+        padding-top: 0;
     }
     #recommandations .heading h2{
         color: #d82c2e;
@@ -532,14 +651,7 @@ right: 15px;
         font-size: 1.2rem;
         transition: 0.5s;
     }
-    .carousel-control-prev, .carousel-control-next{
-        background-image: none;
-        color: #d82c2e;
-    }
-    .carousel-control-prev.active, .carousel-control-next.active{
-        background-image: none;
-        color: #d82c2e;
-    }
+
     #recommandations .bi{
         margin-left: 0.5rem;
         position: relative;
@@ -574,9 +686,6 @@ right: 15px;
     #recommandations .red-divider{
     margin-bottom: 25px;
     }
-    #recommandations{
-        background: #fff;
-    }
     #recommandations .heading h2{
         color: #d82c2e;
         font-size: 1.7rem;
@@ -604,6 +713,7 @@ right: 15px;
     #myCarousel .carousel-item h3{
         color: #d82c2e;
         font-size: 1.3rem;
+        padding: 20px;
     }
     .carousel-control-prev.active, .carousel-control-next.active{
         background-image: none;
@@ -622,7 +732,7 @@ right: 15px;
 }
 /* FOOTER */
 footer{
-    background: #333;
+    background: #262626;
     padding: 20px 0 40px;
 }
 footer .bi{
