@@ -435,7 +435,93 @@ header .image_top {
         margin: 20px auto;
     }
 }
-
+/*  CONTACT INFORMATION */ 
+@media only screen and (min-width: 990px) {
+    .information_block{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 40px auto;
+    }
+    .google_map{
+        margin-left: 8vw;
+    }
+    #contact_form .information{
+        display: flex;
+        flex-direction: column;
+        margin-left: 5vw;
+        border: 1px solid black;
+        border-radius: 10px;
+        margin-right: 3vw;
+    }
+    .information_location_ul, .information_contact_ul, .information_social_ul{
+        list-style: none !important;
+        text-decoration: none;
+        color: black;
+        margin-right: 10px;
+    }
+    .information_location_ul a, .information_contact_ul a, .information_social_ul a{
+        text-decoration: none;
+        color: black;
+    }
+    .information_location_ul i, .information_contact_ul i, .information_social_ul i{
+        margin-right: 10px;
+    }
+    .information_location_ul p, .information_contact_ul p, .information_social_ul p{
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+    .information_location_ul a:hover, .information_contact_ul a:hover, .information_social_ul a:hover{
+        transition: 0.3s;
+        text-decoration: underline;
+        text-decoration-color: red;
+    }
+    .information_location_ul, .information_contact_ul{
+        margin-top: 25px;
+    }
+}
+@media only screen and (max-width: 990px) {
+    .information_block{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        margin: 40px auto;
+    }
+    .google_map{
+        text-align: center;
+    }
+    #contact_form .information{
+        border: 1px solid black;
+        border-radius: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .information_location_ul, .information_contact_ul, .information_social_ul{
+        list-style: none !important;
+        text-decoration: none;
+        color: black;
+    }
+    .information_location_ul a, .information_contact_ul a, .information_social_ul a{
+        text-decoration: none;
+        color: black;
+    }
+    .information_location_ul i, .information_contact_ul i, .information_social_ul i{
+        margin-right: 10px;
+    }
+    .information_location_ul p, .information_contact_ul p, .information_social_ul p{
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+    .information_location_ul a:hover, .information_contact_ul a:hover, .information_social_ul a:hover{
+        transition: 0.3s;
+        text-decoration: underline;
+        text-decoration-color: red;
+    }
+    .information_location_ul, .information_contact_ul, .information_social_ul{
+        margin-top: 25px;
+    }
+}
 /* FOOTER */
 footer {
     margin-top: 40px;
