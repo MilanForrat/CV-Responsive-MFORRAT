@@ -49,7 +49,7 @@ header .image_top {
     }
 }
 /*  ARTICLE BLOG + CAROUSEL  */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1080px) {
     header .nav-item {
         margin: 0.2rem;
     }
@@ -108,7 +108,12 @@ header .image_top {
         font-weight: lighter;
     }
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1080px) {
+    .blog_home{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
     header .nav-item {
         margin: 0.2rem;
     }
@@ -139,10 +144,11 @@ header .image_top {
         border: 1px solid black;
     }
     .blog_right {
-        display: block;
+        display: flex;
         margin-right: auto;
+        margin-left: 15px;
         margin-bottom: 20px;
-        width: 100%;
+        width: 40vw;
         height: auto;
         text-align: center;
     }
@@ -164,9 +170,32 @@ header .image_top {
     .blog_right h1 {
         font-style: italic;
         font-weight: lighter;
+    }
+    .carousel {
+        display: flex;
+        margin: auto auto;
+        width: 40vw;
+        height: auto;
+    }
+    .carousel img{
+        border-radius: 50px;
+    }
+    .carousel-item h5 {
+        font-size: 1.5rem;
+        text-shadow: 0.5px 0.5px 0.5px #000000
+    }
+
+    .carousel-item p {
+        font-size: 1.2rem;
+        text-shadow: 0.5px 0.5px 0.5px #000000
     }
 }
 @media only screen and (min-width: 1500px) {
+    .blog_home{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
     header #navbar_ul_2 {
         position: absolute;
         top: -52px;
@@ -178,11 +207,11 @@ header .image_top {
     }
 
     .blog_right {
-        display: block;
+        display: flex;
         margin-right: auto;
         margin-left: 15px;
         margin-bottom: 20px;
-        width: 100%;
+        width: 40vw;
         height: auto;
         text-align: center;
     }
@@ -205,27 +234,25 @@ header .image_top {
         font-style: italic;
         font-weight: lighter;
     }
-}
-.carousel {
-    display: block;
-    margin-right: auto;
-    margin-bottom: 20px;
-    width: 100%;
-    height: auto;
-}
-.carousel img{
-    border-radius: 50px;
-}
-.carousel-item h5 {
-    font-size: 1.5rem;
-    text-shadow: 0.5px 0.5px 0.5px #000000
-}
+    .carousel {
+        display: flex;
+        margin: auto auto;
+        width: 40vw;
+        height: auto;
+    }
+    .carousel img{
+        border-radius: 50px;
+    }
+    .carousel-item h5 {
+        font-size: 1.5rem;
+        text-shadow: 0.5px 0.5px 0.5px #000000
+    }
 
-.carousel-item p {
-    font-size: 1.2rem;
-    text-shadow: 0.5px 0.5px 0.5px #000000
+    .carousel-item p {
+        font-size: 1.2rem;
+        text-shadow: 0.5px 0.5px 0.5px #000000
+    }
 }
-
 /*  RED DIVIDER   */
 .divider_mid {
     width: 50vw;
@@ -404,37 +431,23 @@ header .image_top {
 #contact_form {
     margin-top: 40px;
 }
-
-@media only screen and (min-width: 800px) {
-    #contact_form #input_email {
-        width: 20vw;
-    }
-
-    #contact_form #input_text {
-        width: 72vw;
-    }
-
-    #contact_form #submit_form {
-        width: 20vw;
-        margin: 20px auto;
-    }
+#contact_form #input_email {
+    width: 40vw;
+    margin: 10px 0vw;
+    margin-left: 10vw;
 }
 
-@media only screen and (max-width: 680px) {
-    #contact_form #input_email {
-        width: 80vw;
-        margin: 10px 10vw;
-    }
-
-    #contact_form #input_text {
-        width: 80vw;
-        margin: 10px 10vw;
-    }
-
-    #contact_form #submit_form {
-        margin: 20px auto;
-    }
+#contact_form #input_text {
+    width: 80vw;
+    margin: 10px 10vw;
 }
+
+#contact_form #submit_form {
+    width: 25vw;
+    margin: 0px 7vw ;
+    margin-bottom: 12px !important;
+}
+
 /*  CONTACT INFORMATION */ 
 @media only screen and (min-width: 990px) {
     .information_block{
@@ -480,12 +493,34 @@ header .image_top {
         margin-top: 25px;
     }
 }
+@media only screen and (max-width: 675px) {
+    .map{
+        display: none;
+    }
+}
+@media only screen and (max-width: 590px) {
+    #contact_form .information {
+        justify-content: start !important;
+    }
+    .information_social, .information_contact, .information_location{
+        margin-left: 0;
+    }
+    .information_location_ul{
+        padding-left: 40px !important;
+    }
+}
 @media only screen and (max-width: 990px) {
     .information_block{
         display: flex;
         flex-direction: column;
-        align-content: center;
         margin: 40px auto;
+    }
+    .information{
+       width: 90vw;
+       margin: auto auto;
+    }
+    .information_location_ul{
+    padding-left: 0;
     }
     .google_map{
         text-align: center;

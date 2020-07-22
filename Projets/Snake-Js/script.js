@@ -31,7 +31,6 @@ window.onload = function(){
         score = 0;
         document.querySelector('canvas').classList.add("canvas");
         canvas.classList;
-        document.getElementById('buttonBackground').addEventListener('click', backgroundButton());
         refreshCanvas();
     }
 
@@ -87,13 +86,13 @@ window.onload = function(){
     function drawScore(){
         ctx.save();
         ctx.font = "bold 200px sans-serif";
-        ctx.fillStyle = "gray";
+        ctx.fillStyle = "black";
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
         var centreX = canvasWidth / 2;
         var centreY = canvasHeight / 2;
         ctx.fillText(score.toString(), centreX, centreY);
-
+        
         ctx.restore();
     }
     function drawBlock(ctx, position){
@@ -226,26 +225,6 @@ window.onload = function(){
         };
 
     }
-    function backgroundButton(){
-        var randomnumber=Math.floor(Math.random()*10)
-        switch(randomnumber)
-        {
-        case 1:
-          document.body.style.backgroundColor= "lightgreen";
-          break;
-        case 2:
-          document.body.style.backgroundColor= "lightblue";
-          break;
-        case 3:
-          document.body.style.backgroundColor= "lightred";
-          break;      
-        
-        default:
-            document.body.style.backgroundColor="white";
-          //code to be executed if n is different from case 1 and 2
-        }   
-        
-        }
 
     document.onkeydown = function handleKeyDown(e){
         var key = e.keyCode;
