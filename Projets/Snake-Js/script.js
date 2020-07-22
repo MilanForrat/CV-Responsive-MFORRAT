@@ -1,53 +1,120 @@
 window.onload = function(){
-    let canvasWidth = 900,
-    canvasHeight = 600,
-    blocksize = 30,
-    ctx,
-    xCoord = 0,
-    yCoord = 0,
-    snakee;
+    var canvasWidth = 900;
+    var canvasHeight = 600;
+    var blockSize = 30;
+    var ctx;
     delay = 100; // en miliseconds soit 1 second
+    var xCoord = 0;
+    var yCoord = 0;
+    var snakee;
+    var applee; 
+    var widthInBlocks = canvasWidth/blockSize;
+    var heightInBlocks = canvasHeight/blockSize;
+    var score;
+    var timeOut;
+    var progressBar = 0;
+    var progressBarWidth = 1;
 
     init();
 
     function init(){
-        let canvas = document.createElement('canvas');
+        var canvas = document.createElement('canvas');
+        var mainSection=document.getElementById("main");
+        var progressBar = document.getElementById('myBar');
         canvas.width = canvasWidth;
         canvas.height = canvasHeight;
-        canvas.style.border = "1px solid";
-        document.body.appendChild(canvas);  // attribution du canvas au body HTML
-        ctx = canvas.getContext('2d');   // style de dessin, en 2D ici
-        snakee = new Snake([[6,4],[5,4], [4,4]], "right");
+        canvas.style.display = "block";
+        mainSection.appendChild(canvas);
+        ctx = canvas.getContext('2d');
+        snakee = new Snake([[6,4],[5,4],[4,4],[3,4],[2,4]],"right");
+        applee = new Apple([10,10]);
+        score = 0;
+        document.querySelector('canvas').classList.add("canvas");
+        canvas.classList;
+        document.getElementById('buttonBackground').addEventListener('click', backgroundButton());
         refreshCanvas();
     }
 
     function refreshCanvas(){
-
-        xCoord+=2;
-        yCoord+=2;
-        ctx.clearRect(0,0,canvasWidth, canvasHeight);
         snakee.advance();
-        snakee.draw();
-        setTimeout(refreshCanvas, delay);  // utilise setTimout pour indiquer quel élémeent on veut relancer tous les x delay (ici delay = 1 sec)
+        if (snakee.checkCollision()){
+            gameOver();
+        } else {
+            if (snakee.isEatingApple(applee)){
+                score++;
+                progressBarWidth++;
+                //console.log(progressBar);
+                //document.getElementById("myBar").innerHTML = progressBar;
+                document.getElementById("myBar").style.width = progressBarWidth+"%";
+                snakee.ateApple = true;
+                do {
+                    applee.setNewPosition(); 
+                } while(applee.isOnSnake(snakee));
+            }
+            ctx.clearRect(0,0,canvasWidth,canvasHeight);
+            drawScore();
+            snakee.draw();
+            applee.draw();
+            timeOut = setTimeout(refreshCanvas,delay); // utilise setTimout pour indiquer quel élémeent on veut relancer tous les x delay (ici delay = 1 sec)
+         }
     }
+    function gameOver(){
+        ctx.save();
+        ctx.font = "bold 70px sans-serif";
+        ctx.fillStyle = "#000";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.strokeStyle = "white";
+        ctx.lineWidth = 5;
+        var centreX = canvasWidth / 2;
+        var centreY = canvasHeight / 2;
+        ctx.strokeText("Game Over", centreX, centreY - 180);
+        ctx.fillText("Game Over", centreX, centreY - 180);
+        ctx.font = "bold 30px sans-serif";
+        ctx.strokeText("Appuyer sur la touche Espace pour rejouer", centreX, centreY - 120);
+        ctx.fillText("Appuyer sur la touche Espace pour rejouer", centreX, centreY - 120);
+        ctx.restore();
+    }
+    
+    function restart(){
+        snakee = new Snake([[6,4],[5,4],[4,4],[3,4],[2,4]],"right");
+        applee = new Apple([10,10]);
+        score = 0;
+        clearTimeout(timeOut);
+        refreshCanvas();
+    }
+    
+    function drawScore(){
+        ctx.save();
+        ctx.font = "bold 200px sans-serif";
+        ctx.fillStyle = "gray";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        var centreX = canvasWidth / 2;
+        var centreY = canvasHeight / 2;
+        ctx.fillText(score.toString(), centreX, centreY);
 
+        ctx.restore();
+    }
     function drawBlock(ctx, position){
-        let x = position[0] * blocksize,
-        y = position[1] * blocksize;
-        ctx.fillRect(x,y,blocksize, blocksize);  // on créer notre rectangle (= snake), on lui donne les positions et la taille d'un "bloc" (blocksize x blocksize)
+        var x = position[0]*blockSize;
+        var y = position[1]*blockSize;
+        ctx.fillRect(x,y,blockSize,blockSize); // on créer notre rectangle (= snake), on lui donne les positions et la taille d'un "bloc" (blocksize x blocksize)
     }
-
-    function Snake(body, direction){   // équivalent d'une fonction constructeur
+    function Snake(body, direction){
         this.body = body;
-        this.direction=direction;
+        this.direction = direction;
+        this.ateApple = false;
+        
         this.draw = function(){
             ctx.save();
             ctx.fillStyle="#ff0000";
-            for(var i=0 ; i < this.body.length; i++){
-                drawBlock(ctx, this.body[i]);
+            for (var i=0 ; i < this.body.length ; i++){
+                drawBlock(ctx,this.body[i]);
             }
             ctx.restore();
-        }
+        };
+        
         this.advance = function(){
             var nextPosition = this.body[0].slice();
             switch(this.direction){
@@ -66,12 +133,15 @@ window.onload = function(){
                 default:
                     throw("invalid direction");
             }
-            this.body.unshift(nextPosition);  // ajoute la nouvelle variable à la première position du tableau
-            this.body.pop();  // efface le dernier élément d'un array
-        }
-
+            this.body.unshift(nextPosition);
+            if (!this.ateApple)
+                this.body.pop();
+            else
+                this.ateApple = false;
+        };
+        
         this.setDirection = function(newDirection){
-            let allowedDirections;
+            var allowedDirections;
             switch(this.direction){
                 case "left":
                 case "right":
@@ -84,14 +154,99 @@ window.onload = function(){
                default:
                     throw("invalid direction");
             }
-                if(allowedDirections.indexOf(newDirection) > -1){   //allowedDirection est un array, donc si son index est > -1 alors cest que sa direction est soit 0 ou 1 (up down left ou right) et donc elle est autorisée
-                    this.direction = newDirection;
-                }
+            if (allowedDirections.indexOf(newDirection) > -1){
+                this.direction = newDirection;
+            }
+        };
+        
+        this.checkCollision = function(){
+            var wallCollision = false;
+            var snakeCollision = false;
+            var head = this.body[0];
+            var rest = this.body.slice(1);
+            var snakeX = head[0];
+            var snakeY = head[1];
+            var minX = 0;
+            var minY = 0;
+            var maxX = widthInBlocks - 1;
+            var maxY = heightInBlocks - 1;
+            var isNotBetweenHorizontalWalls = snakeX < minX || snakeX > maxX;
+            var isNotBetweenVerticalWalls = snakeY < minY || snakeY > maxY;
+            
+            if (isNotBetweenHorizontalWalls || isNotBetweenVerticalWalls)
+                wallCollision = true;
+            
+            for (var i=0 ; i<rest.length ; i++){
+                if (snakeX === rest[i][0] && snakeY === rest[i][1])
+                    snakeCollision = true;
+            }
+            
+            return wallCollision || snakeCollision;        
+        };
+        
+        this.isEatingApple = function(appleToEat){
+            var head = this.body[0];
+            if (head[0] === appleToEat.position[0] && head[1] === appleToEat.position[1])
+                return true;
+            else
+                return false;
         }
+        
+    }
+    
+    function Apple(position){
+        this.position = position;
+        
+        this.draw = function(){
+          ctx.save();
+          ctx.fillStyle = "#33cc33";
+          ctx.beginPath();
+          var radius = blockSize/2;
+          var x = this.position[0]*blockSize + radius;
+          var y = this.position[1]*blockSize + radius;
+          ctx.arc(x, y, radius, 0, Math.PI*2, true);
+          ctx.fill();
+          ctx.restore();
+        };
+        
+        this.setNewPosition = function(){
+            var newX = Math.round(Math.random()*(widthInBlocks-1));
+            var newY = Math.round(Math.random()*(heightInBlocks-1));
+            this.position = [newX,newY];
+        }; 
+        
+        this.isOnSnake = function(snakeToCheck){
+            var isOnSnake = false;
+            for (var i=0 ; i < snakeToCheck.body.length ; i++){
+                if(this.position[0] === snakeToCheck.body[i][0] && this.position[1] === snakeToCheck.body[i][1]){
+                    isOnSnake = true;     
+                }
+            }
+            return isOnSnake;
+        };
 
     }
+    function backgroundButton(){
+        var randomnumber=Math.floor(Math.random()*10)
+        switch(randomnumber)
+        {
+        case 1:
+          document.body.style.backgroundColor= "lightgreen";
+          break;
+        case 2:
+          document.body.style.backgroundColor= "lightblue";
+          break;
+        case 3:
+          document.body.style.backgroundColor= "lightred";
+          break;      
+        
+        default:
+            document.body.style.backgroundColor="white";
+          //code to be executed if n is different from case 1 and 2
+        }   
+        
+        }
 
-    
     document.onkeydown = function handleKeyDown(e){
         var key = e.keyCode;
         var newDirection;
@@ -108,6 +263,9 @@ window.onload = function(){
             case 40:
                 newDirection = "down";
                 break;
+            case 32:
+                restart();
+                return;
             default:
                 return;
         }
