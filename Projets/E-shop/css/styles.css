@@ -48,6 +48,9 @@ header .image_top {
         margin-right: 30px;
     }
 }
+.dropdown-item{
+    font-size: 0.8rem !important;
+}
 /*  ARTICLE BLOG + CAROUSEL  */
 @media only screen and (max-width: 1080px) {
     header .nav-item {
