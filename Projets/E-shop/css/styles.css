@@ -15,7 +15,7 @@ header .image_top {
     margin-left: auto;
     margin-right: auto;
     border: 1px solid #E2D4C4;
-    border-radius: 50px;
+    border-radius: 25px;
     width: 100%;
     height: auto;
 }
@@ -51,6 +51,42 @@ header .image_top {
 .dropdown-item{
     font-size: 0.8rem !important;
 }
+.nav-item:hover, .dropdown-item:hover, #form_search:hover{
+    background-color: rgba(0, 105, 217, 0.7);
+    transition: 0.5s;
+    
+}
+.loader_div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.loader_div h1{
+    margin-bottom: 0;
+}
+.loader_bike {
+    border: 5px solid black;
+    border-radius: 50%;
+    border-top: 5px solid #0069D9;
+    border-bottom: 5px solid #0069D9;
+    width: 30px;
+    height: 30px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    position: relative;
+    margin: 0;
+    top: 11px;
+}
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
 /*  ARTICLE BLOG + CAROUSEL  */
 @media only screen and (max-width: 1080px) {
     header .nav-item {
@@ -100,8 +136,6 @@ header .image_top {
         margin-top: 10px;
         margin-bottom: 20px;
         text-transform: uppercase;
-        text-decoration: underline;
-        text-decoration-color: red;
         font-style: italic;
         font-weight: bold;
     }
@@ -164,8 +198,6 @@ header .image_top {
         margin-top: 10px;
         margin-bottom: 20px;
         text-transform: uppercase;
-        text-decoration: underline;
-        text-decoration-color: red;
         font-style: italic;
         font-weight: bold;
     }
@@ -227,8 +259,6 @@ header .image_top {
         margin-top: 10px;
         margin-bottom: 20px;
         text-transform: uppercase;
-        text-decoration: underline;
-        text-decoration-color: red;
         font-style: italic;
         font-weight: bold;
     }
@@ -266,13 +296,23 @@ header .image_top {
     border-radius: 5px;
     margin: 30px auto;
 }
-
+/*  BLUE DIVIDER WHEEL TITLE  */
+.divider_mid_wheel {
+    width: 6rem;
+    height: 2px;
+    background: #0069D9;
+    border: 1px solid #0069D9;
+    border-radius: 5px;
+    margin: 0 auto;
+    position: relative;
+    left: 18px;
+}
 /* BEST DEALS */
 .h3_best_deals {
     text-align: center;
     text-transform: uppercase;
     text-decoration: underline;
-    text-decoration-color: red;
+    text-decoration-color: #0069D9;
     font-style: italic;
     font-weight: bold;
     margin-bottom: 40px;
@@ -452,6 +492,12 @@ header .image_top {
 }
 
 /*  CONTACT INFORMATION */ 
+.information p {
+    color: rgba(0, 105, 217);
+}
+.information p i {
+    color: black;
+}
 @media only screen and (min-width: 990px) {
     .information_block{
         display: flex;
@@ -490,7 +536,7 @@ header .image_top {
     .information_location_ul a:hover, .information_contact_ul a:hover, .information_social_ul a:hover{
         transition: 0.3s;
         text-decoration: underline;
-        text-decoration-color: red;
+        text-decoration-color: #0069D9;
     }
     .information_location_ul, .information_contact_ul{
         margin-top: 25px;
@@ -569,7 +615,7 @@ footer {
 
 footer .bi {
     font-size: 1.5rem;
-    color: #d82c2e;
+    color: #0069D9;
     margin: 20px;
     height: 30px;
 }
@@ -593,6 +639,19 @@ footer h5 #author {
 }
 
 footer h5 #author:hover {
-    font-size: 1.2rem;
-    transition: 0.3s;
+    font-size: 1.1rem;
+    transition: 0.5s;
+    text-decoration: underline;
+    text-decoration-color: #0069D9;
+}
+footer .legal {
+    font-style: italic;
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #fff;
+}
+footer .legal:hover {
+text-decoration: underline;
+text-decoration-color: #0069D9;
+transition: 0.5s;
 }
