@@ -68,6 +68,9 @@ header{
     text-transform: uppercase;
     font-weight: bold;
 }
+.navbar a{
+    text-decoration: none;
+}
 .nav-pills .nav-link{
     color: #fff !important;
     text-align: center;
