@@ -18,6 +18,17 @@ img{
     max-width: 100%;
     height: auto;
 }
+a{
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+a:hover{
+    text-decoration: underline;
+    text-decoration-color: red;
+    color: black;
+    transition: 0.5s;
+}
 section .heading{
     text-align: center;
     padding-bottom: 40px;
@@ -43,7 +54,7 @@ section .heading h2{
     border-radius: 5px;
 }
 section{
-    padding: 45px 0 80px 0;
+    padding-top: 45px;
 }
 header{
     background-color: #d82c2e;
@@ -56,6 +67,9 @@ header{
     letter-spacing: 4px;
     text-transform: uppercase;
     font-weight: bold;
+}
+.navbar a{
+    text-decoration: none;
 }
 .nav-pills .nav-link{
     color: #fff !important;
@@ -70,120 +84,27 @@ header{
     border-style: none;
 }
 /* SOCIAL ELEMENTS */
+#add_cv{
+    text-decoration: none !important;
+}
 .list_social{
     display: flex;
     justify-content: center;
-    padding-left: 0;
+    color: #000000;
 }
-.list_social li{
-    display: inline;
-    margin: 0px 4px 0px 4px ;
+.list_social_ul{
+    margin-top: 2rem;
+    text-align: start;
 }
-.list_social a{
-    font-size: 2rem;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 8px;
-    border-radius: 50%;
-    text-decoration: none;
-    color: #d82c2e;
-    transition: 0.5s;
+.list_social_ul a:hover{
+    text-decoration-color: white;
 }
-.list_social a:hover{
-    box-shadow: 0px 0px 10px 5px white;
-}
-#github{
-    transition: 0.5s;
-}
-#email{
-    transition: 0.5s;
-}
-#linkedIn{
-    transition: 0.5s;
-}
-#call_phone{
-    transition: 0.5s;
-}
-#github_logo{
-    position: relative;
-    top: 2px;
-}
-#email_logo{
-    position: relative;
-    top: 2px;
-}
-#linkedIn_logo{
-    position: relative;
-    top: 2px;
-}
-#call_phone_logo{
-    position: relative;
-    top: 2px;
-}
-#github_legend{
-    font-style: italic;
-    text-align: center;
+.list_social_ul_h5{
     color: white;
-    font-size: 0.8rem;
-    margin-bottom: 0;
-    display: none;
+    text-shadow: 0.5px 0.5px 0.5px black;
 }
-#email_style{
-    text-align: center;
-    color: white;
-    background-color: #d82c2e;
-    font-size: 1rem;
-    display:none;
-    font-style: italic;
-    box-shadow: 0px 0px 10px 2px black;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 2px 10px 2px 10px;
-    margin-bottom: 0;
-}
-#call_phone_style{
-    text-align: center;
-    color: white;
-    background-color: #d82c2e;
-    font-size: 1rem;
-    display:none;
-    font-style: italic;
-    box-shadow: 0px 0px 10px 2px black;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 2px 10px 2px 10px;
-    margin-bottom: 0;
-}
-#call_phone_legend{
-    font-style: italic;
-    text-align: center;
-    color: white;
-    font-size: 0.8rem;
-    margin-bottom: 0;
-    display: none;
-}
-#linkedIn_legend{
-    font-style: italic;
-    text-align: center;
-    color: white;
-    font-size: 0.8rem;
-    margin-bottom: 0;
-    display: none;
-}
-#email_legend{
-    font-style: italic;
-    text-align: center;
-    color: white;
-    font-size: 0.8rem;
-    margin-bottom: 0;
-    display: none;
-}
-#add_cv_legend{
-    font-style: italic;
-    text-align: center;
-    color: white;
-    font-size: 0.8rem;
-    margin-bottom: 0;
-    display: none;
+.list_social_ul_span{
+    font-weight: bold;
 }
 /* DESCRIPTION */
 #about .thumbnail{
@@ -231,7 +152,6 @@ header{
     border-radius: 3px;
     display: inline-block;
     transition: all 0.2s ease-in;
-
 }
 .button1:hover{
     background-color: white;
@@ -296,13 +216,6 @@ header{
 .timeline-heading h3{
     margin-top: 5px;
     font-size: 20px;
-}
-.timeline h3 a{
-    text-decoration: none;
-    color: black;
-}
-.timeline h3 a:hover{
-    text-decoration: underline black;
 }
 .timeline-heading h4{
     color: #d82c2e;
@@ -435,6 +348,9 @@ header{
     color: black;
     font-size: 1rem;
 }
+.education_ul{
+    text-align: justify;
+}
 #education .material-icons{
     font-size: 0.8rem;
 }
@@ -474,18 +390,19 @@ header{
 }
 .education-block h3 a{
     color: #d82c2e;
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: black;
 }
 .education-block h3 a:hover{
     color: #d82c2e;
-    text-decoration: none;
-    text-decoration: underline black;
+    text-decoration: underline red;
 }
 .education-block h4{
     margin-bottom: 20px;
 }
 .education-block p{
     font-weight: bold;
+    text-align: justify !important;
 }
 .education-block .red-divider{
     margin-bottom: 20px;
@@ -694,7 +611,13 @@ footer h5{
     font-size: 0.8rem;
     font-weight: normal;
 }
-footer h5 #author{
+footer h5 #author a{
     font-style: italic;
     font-size: 1rem;
+    color: white !important;
+    text-decoration-color: white;
+}
+footer h5 #author a:hover{
+    text-decoration-color: red;
+    transition: 0.5s;
 }
