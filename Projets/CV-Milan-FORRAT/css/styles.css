@@ -89,12 +89,11 @@ header{
 }
 .list_social{
     display: flex;
-    justify-content: center;
     color: #000000;
 }
 .list_social_ul{
     margin-top: 2rem;
-    text-align: start;
+
 }
 .list_social_ul a:hover{
     text-decoration-color: white;
@@ -105,6 +104,9 @@ header{
 }
 .list_social_ul_span{
     font-weight: bold;
+}
+.list_social_ul li{
+    margin-left: 1rem;
 }
 /* DESCRIPTION */
 #about .thumbnail{
@@ -423,7 +425,6 @@ header{
 #portfolio{
     background-color: #ffffff;
 }
-
 @media only screen and (max-width: 992px){
     #portfolio {
         padding: 45px 0 0 0;
@@ -457,7 +458,9 @@ header{
     margin-bottom: 45px;
 }
 /*  RECOMMANDATIONS  */
-
+#recommandations{
+    margin-top: 3rem;
+}
 #recommandations a{
     text-decoration: none;
     color: #000;
