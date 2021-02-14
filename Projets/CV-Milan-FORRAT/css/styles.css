@@ -191,7 +191,7 @@ header{
 }
 .progress-bar{
     background: #d82c2e;
-    animation: load 3s normal forwards;
+    animation: load 3s 10s 1 normal forwards;
     box-shadow: 0 10px 40px -10px #fff;
     border-radius: 100px;
     height: 30px;
