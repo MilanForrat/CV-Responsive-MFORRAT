@@ -482,7 +482,8 @@ header{
     }
     #portfolio .thumbnail img:hover{
         filter: none;   
-        -webkit-filter: none;   
+        -webkit-filter: none;
+        transition: 0.5s;   
     }
     #portfolio article{
         padding: 15px 15px;
