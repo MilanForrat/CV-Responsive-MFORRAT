@@ -91,6 +91,7 @@ header{
 /* SOCIAL ELEMENTS */
 #add_cv{
     text-decoration: none !important;
+    text-shadow: 0.5px 0.5px 0.1px #000000;
 }
 .list_social{
     color: #000000;
