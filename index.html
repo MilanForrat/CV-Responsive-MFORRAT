@@ -1,8 +1,11 @@
-<!doctype html>
-<html lang="fr">
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
     <head>
-        <meta charset="utf-8"/>
+        <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Bienvenue sur le CV en ligne de Milan FORRAT - Développeur Web et Web Mobile.">
+        <meta name="author" content="Milan FORRAT">
+        <meta name="keywords" content="HTML, CSS, JavaScript, PHP, Développeur Web, Milan, FORRAT, Symfony, Bootstrap, SQL">
         <link rel="shortcut icon" type="image/png" href="./Projets/CV-Milan-FORRAT/images/favicon.png"/>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
@@ -15,28 +18,24 @@
         <link rel="stylesheet" href="./Projets/CV-Milan-FORRAT/css/styles.css">
         <title>CV Milan FORRAT</title>
     </head>
-
-  <body data-spy="scroll" data-target=".navbar" data-offset="60">
-    <header>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-            <a class="navbar-brand" href="#"></a>
-    
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
-                    <i class="fas fa-bars fa-lg"></i>
-            </button>
+    <body data-spy="scroll" data-target=".navbar" data-offset="60">
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+                        <i class="fas fa-bars fa-lg"></i>
+                </button>
                 <div class="collapse navbar-collapse justify-content-center" id="myNavbar">
                     <ul class="nav nav-pills navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="#about">Profil</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#education">Parcours</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#experience">Expériences</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#recommandations">Recommandations</a></li>
+                        <li class="nav-item"><a class="nav-link" title="Se déplacer à la section Profil du site" href="#about">Profil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#skills" title="Se déplacer à la section Compétences du site">Compétences</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#education" title="Se déplacer à la section Parcours du site">Parcours</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#experience" title="Se déplacer à la section Expériences du site">Expériences</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio" title="Se déplacer à la section Portfolio du site">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#recommandations" title="Se déplacer à la section Recommandations du site">Recommandations</a></li>
                     </ul>
                 </div>
-        </nav>
-    </header>
-    
+            </nav>
+        </header>
                                                                 <!-- SECTION 1 - Description -->
         <section id="about" class="container-fluid">
             <div class="col-8 col-lg-4 profile-picture">
@@ -44,9 +43,9 @@
             </div>
             <div class="heading">
                 <h1>Milan FORRAT</h1>
-                <h3>Développeur Web et Web Mobile, <small>spécialisé Symfony (PHP)</small></h3>
+                <h2 id="heading-job-title">Développeur Web et Web Mobile, <small>spécialisé Symfony (PHP)</small></h2>
                 <h6>#DevJunior4Life #AlwaysImprove #WhenInDoubtSearchOrAsk #TeamWork</h6>
-                <a id="add_cv" href="./Projets/CV-Milan-FORRAT/docs/CV Milan FORRAT - Dev WEB.pdf" class="button1" target="blank"><span id="plus_cv" class="material-icons">
+                <a id="add_cv" href="./Projets/CV-Milan-FORRAT/docs/CV Milan FORRAT - Dev WEB.pdf" title="Ouvrir le CV au format PDF" class="button1" target="_blank" rel="noopener noreferrer"><span id="plus_cv" class="material-icons">
                     add_circle_outline
                     </span>Télécharger CV</a>
                 <div class="list_social">
@@ -58,9 +57,9 @@
                     </ul>
                     <ul class="list_social_ul">
                         <h5 class="list_social_ul_h5"><i class="fas fa-database"></i> Mon Profil Web :</h5>
-                        <li><a href="https://www.linkedin.com/in/milan-forrat-09043925/" target="blank">LinkedIn</a></li>
-                        <li><a href="https://github.com/MilanForrat" target="blank">Github</a></li>
-                        <li><a href="https://stackoverflow.com/users/14597146/milandemoniack" target="blank">StackOverflow</a></li>
+                        <li><a href="https://www.linkedin.com/in/milan-forrat-09043925/" title="Ouvrir la page de mon profil LinkedIn" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="https://github.com/MilanForrat" target="_blank" rel="noopener noreferrer" title="Ouvrir la page de mon profil Github" >Github</a></li>
+                        <li><a href="https://stackoverflow.com/users/14597146/milandemoniack" target="_blank" rel="noopener noreferrer" title="Ouvrir la page de mon profil StackOverflow" >StackOverflow</a></li>
                     </ul>
                 </div>
                 <div class="list_social">
@@ -176,7 +175,7 @@
                                     </span> Lyon (69), France </small> <small class="far fa-clock"> 2020</small>
                                 </h5>
                                 <i class="fas fa-graduation-cap"></i>
-                                <h3><a target="blank" href="https://oclock.io/formations/developpeur-web">O’Clock Ecole de Dév'</a></h3>
+                                <h3><a target="_blank" rel="noopener noreferrer" href="https://oclock.io/formations/developpeur-web" title="Ouvrir le site de l'école O'Clock">O’Clock Ecole de Dév'</a></h3>
                                 <h4>Formation Développeur Web et Web Mobile</h4>
                                 <div class="red-divider_mid"></div>
                                 <p>HTML/CSS, Bootstrap, JavaScript, PHP, SYMFONY, MySQL, Responsive Design</p>
@@ -186,11 +185,11 @@
                                         <li>- 5 mois, soit 700 heures intensives de formation</li>
                                         <li>- 3 mois de socle (apprentissage des langages)</li>
                                         <li>- 1 mois de spécialisation : Symfony5</li>
-                                        <li>- 1 mois de projet : GWITH - Game Where I'm The Hero: Application web pour jouer des histoires dont vous êtes le héros et où il est également possible d'en créer (<a href="https://lnkd.in/ejusTh7" target="blank">voir la présentation</a>)</li>
+                                        <li>- 1 mois de projet : GWITH - Game Where I'm The Hero: Application web pour jouer des histoires dont vous êtes le héros et où il est également possible d'en créer (<a href="https://lnkd.in/ejusTh7" title="Ouvrir le lien LinkedIn concernant le projet GWITH" target="_blank" rel="noopener noreferrer">voir la présentation</a>)</li>
                                     </ul>         
                                 </p>
                                 <hr>
-                                <p><a href="./Projets/CV-Milan-FORRAT/docs/Attestation de formation - Développeur Web - OCLOCK - M FORRAT.pdf" target="blank">Télécharger le Certificat de formation</a></p>                              
+                                <p><a href="./Projets/CV-Milan-FORRAT/docs/Attestation de formation - Développeur Web - OCLOCK - M FORRAT.pdf" target="_blank" rel="noopener noreferrer"  title="Ouvrir le certificat de formation au format PDF">Télécharger le Certificat de formation</a></p>                              
                             </div>
                         </div>
                         <div class="col-md-4 col-lg-6">
@@ -200,7 +199,7 @@
                                     </span> Lyon (69), France </small> <small class="far fa-clock"> 2020</small>
                                 </h5>
                                 <i class="fas fa-graduation-cap"></i>
-                                <h3><a target="blank" href="https://www.opquast.com/certification/">OPQUAST</a></h3>
+                                <h3><a target="_blank" rel="noopener noreferrer" href="https://www.opquast.com/certification/" title="Ouvrir le site d'OPQUAST">OPQUAST</a></h3>
                                 <h4>Certification officielle : « Maîtrise de la qualité en projet Web »</h4>
                                 <div class="red-divider_mid"></div>
                                 <p>Résultat : 855 / 1000 -> Niveau Avancé ★★★★☆</p>
@@ -218,8 +217,8 @@
                                     <li>- Prévenir les risques, renforcer l’assurance qualité Web.</li>
                                 </ul>
                                 <hr>
-                                <p><a href="./Projets/CV-Milan-FORRAT/docs/OPQUAST - M FORRAT.pdf" target="blank">Télécharger le Certificat de formation</a></p>
-                                 <p><a href="./Projets/CV-Milan-FORRAT/docs/OPQUAST - Programme.pdf" target="blank">Télécharger le Programme de formation</a></p>                                 
+                                <p><a href="./Projets/CV-Milan-FORRAT/docs/OPQUAST - M FORRAT.pdf" title="Ouvrir le diplôme au format PDF" target="_blank" rel="noopener noreferrer">Télécharger le Certificat de formation</a></p>
+                                 <p><a href="./Projets/CV-Milan-FORRAT/docs/OPQUAST - Programme.pdf" title="Ouvrir la brochure au format PDF" target="_blank" rel="noopener noreferrer">Télécharger le Programme de formation</a></p>                                 
                             </div>
                         </div>
                         <div class="col-md-4 col-lg-6">
@@ -229,7 +228,7 @@
                                     </span> Lyon (69), France </small> <small class="far fa-clock"> 2020</small>
                                 </h5>
                                 <i class="fas fa-graduation-cap"></i>
-                                <h3><a target="blank" href="https://www.udemy.com/course/formation-developpeur-web/">Udemy</a></h3>
+                                <h3><a target="_blank" rel="noopener noreferrer" href="https://www.udemy.com/course/formation-developpeur-web/" title="Ouvrir le site de la formation">Udemy</a></h3>
                                 <h4>Formation en ligne : Développeur Web</h4>
                                 <div class="red-divider_mid"></div>
                                 <p>HTML/CSS, Bootstrap, JavaScript, PHP, MySQL, Responsive, Mise en Ligne des sites</p>
@@ -237,7 +236,7 @@
                                 <p>Formation en ligne m'ayant permis d'acquérir de bonnes bases sur différents langages de programmation web et de toucher du doigt à plusieurs technologies.
                                     Cela m'a également permis de créer plusieurs projets, relativement simples dû à l'expérience que j'avais.</p>
                                 <hr>
-                                <p><a href="./Projets/CV-Milan-FORRAT/docs/Udemy - Dev Web.pdf" target="blank">Télécharger le Certificat de formation</a></p>                                
+                                <p><a href="./Projets/CV-Milan-FORRAT/docs/Udemy - Dev Web.pdf" title="Ouvrir le diplome au format PDF" target="_blank" rel="noopener noreferrer">Télécharger le Certificat de formation</a></p>                                
                             </div>
                         </div>
                         <div class="col-md-4 col-lg-6">
@@ -247,12 +246,12 @@
                                     </span> Lyon (69), France </small> <small class="far fa-clock"> 2020</small>
                                 </h5>
                                 <i class="fas fa-graduation-cap"></i>
-                                <h3><a target="blank" href="https://www.udemy.com/course/hacking-ethique-securite-web/">Udemy</a></h3>
+                                <h3><a target="_blank" rel="noopener noreferrer" href="https://www.udemy.com/course/hacking-ethique-securite-web/" title="Ouvrir le site de la formation">Udemy</a></h3>
                                 <h4>Formation Online Hacking Éthique : <span class="small-h4">Tests d'Intrusion et Sécurité Web</span></h4>
                                 <div class="red-divider_mid"></div>
                                 <p>Sécurisation des sites contre les failles web (website penetration testing), intrusion MySQL, mise en place de tests de fiabilité</p>
                                 <hr>
-                                <p>Objectif : compléter la formation pour la fin mars 2021</p>
+                                <p>Objectif : compléter la formation pour la fin juin 2021</p>
                             </div>
                         </div>
                         <div class="col-md-4 col-lg-6">
@@ -262,14 +261,14 @@
                                     </span> Grenoble (38), France </small> <small class="far fa-clock"> 2019</small>
                                 </h5>
                                 <i class="fas fa-graduation-cap"></i>
-                                <h3><a target="blank" href="https://www.cnpc.fr/">CNPC Ecole de Commerce du Sport</a></h3>
+                                <h3><a target="_blank" rel="noopener noreferrer" href="https://www.cnpc.fr/" title="Ouvrir le site du CNPC">CNPC Ecole de Commerce du Sport</a></h3>
                                 <h4>CQP Technicien Cycle</h4>
                                 <div class="red-divider_mid"></div>
                                 <p>Formation qualifiante en commerce et mécanique du cycle obtenue après plusieurs mois de formation intensive. Cette dernière m'a permis de travailler en France et à l'étranger 
                                     en mécanique cycle avant de pouvoir me lancer dans le développement web.
                                 </p>
                                 <hr>
-                                <p><a href="./Projets/CV-Milan-FORRAT/docs/CQP CYCLE M FORRAT.pdf" target="blank">Télécharger le Certificat de formation</a></p>    
+                                <p><a href="./Projets/CV-Milan-FORRAT/docs/CQP CYCLE M FORRAT.pdf" title="Ouvrir le diplôme au format PDF"  target="_blank" rel="noopener noreferrer">Télécharger le Certificat de formation</a></p>    
                             </div>
                         </div>
                         <div class="col-md-4 col-lg-6">
@@ -279,7 +278,7 @@
                                     </span> Châteaulin (29), France </small> <small class="far fa-clock"> 2014</small>
                                 </h5>
                                 <i class="fas fa-graduation-cap"></i>
-                                <h3><a target="blank" href="https://www.gendarmerie.interieur.gouv.fr/cegn/Autres-pages/Ecoles/Ecole-de-gendarmerie-de-Chateaulin">Ecole des Sous-Officiers Gendarmerie Nationale</a></h3>
+                                <h3><a target="_blank" rel="noopener noreferrer" href="https://www.gendarmerie.interieur.gouv.fr/cegn/Autres-pages/Ecoles/Ecole-de-gendarmerie-de-Chateaulin" title="Ouvrir le site de l'école de Gendarmerie de Chateaulin">Ecole des Sous-Officiers Gendarmerie Nationale</a></h3>
                                 <h4>Certificat d’Aptitude Gendarmerie</h4>
                                 <div class="red-divider_mid"></div>
                                 <p>Formation sous-officier de Gendarmerie</p>
@@ -295,12 +294,12 @@
                                     </span> Bangkok, Thaïlande </small> <small class="far fa-clock"> 2012</small>
                                 </h5>
                                 <i class="fas fa-graduation-cap"></i>
-                                <h3><a href="https://www.lfib.ac.th/" target="blank">LFIB</a> et <a href="https://www.fasny.org/" target="blank">FASNY</a></h3>  
+                                <h3><a href="https://www.lfib.ac.th/" title="Ouvrir le site du LFIB" target="_blank" rel="noopener noreferrer">LFIB</a> et <a href="https://www.fasny.org/" target="blank">FASNY</a></h3>  
                                 <h4>Baccalauréat <span class="small-h4">(Economique et Social)</span></h4>
                                 <div class="red-divider_mid"></div>
                                 <p>Diplôme obtenu à la suite d’un cursus scolaire international de 10 ans à la French American School Of New York (FASNY) et au Lycée Français International de Bangkok (LFIB)</p>
                                 <hr>
-                                <p><a href="./Projets/CV-Milan-FORRAT/docs/Diplome bac FORRAT MILAN.pdf" target="blank">Télécharger le diplôme</a></p>    
+                                <p><a href="./Projets/CV-Milan-FORRAT/docs/Diplome bac FORRAT MILAN.pdf" title="Ouvrir le diploôme au format PDF"  target="_blank" rel="noopener noreferrer">Télécharger le diplôme</a></p>    
                             </div>
                         </div> 
                     </div>
@@ -319,7 +318,7 @@
                         <div class="timeline-panel-container">
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h3><a target="blank" href="http://dev-web.milan-forrat.com/">Projet web : http://dev-web.milan-forrat.com/</a></h3>
+                                    <h3><a target="_blank" rel="noopener noreferrer" href="http://dev-web.milan-forrat.com/" title="Ouvrir le CV en Ligne (page actuelle)">Projet web : http://dev-web.milan-forrat.com/</a></h3>
                                     <h4>Développeur Web Fullstack</h4>
                                     <p class="text-muted"><small><span class="material-icons">
                                         room
@@ -356,7 +355,7 @@
                         <div class="timeline-panel-container-inverted">
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h3><a target="blank" href="http://www.ahumbert-reflexologue.fr/">Projet web : Anne Humbert, réflexologue plantaire</a></h3>
+                                    <h3><a target="_blank" rel="noopener noreferrer" href="http://www.ahumbert-reflexologue.fr/" title="Ouvrir le site de Réflexologie Plantaire">Projet web : Anne Humbert, réflexologue plantaire</a></h3>
                                     <h4>Développeur Web Fullstack</h4>
                                     <p class="text-muted"><small><span class="material-icons">
                                         room
@@ -376,7 +375,7 @@
                                     <hr>
                                     <p style="font-style : italic">La responsabilité des contenus (images et textes) n'est pas mienne</p>
                                     <hr>
-                                    <p><a href="./Projets/CV-Milan-FORRAT/docs/Cahier des charges.pdf" target="blank">Télécharger le Cahier des Charges</a></p>    
+                                    <p><a href="./Projets/CV-Milan-FORRAT/docs/Cahier des charges.pdf" title="Ouvrir le cahier des charges au format PDF" target="_blank" rel="noopener noreferrer">Télécharger le Cahier des Charges</a></p>    
                                 </div>
                             </div>
                         </div>
@@ -386,7 +385,7 @@
                         <div class="timeline-panel-container">
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h3><a target="blank" href="https://oclock.io/">O'Clock - Projet Fin de Formation Développeur Web</a></h3>
+                                    <h3><a target="_blank" rel="noopener noreferrer" href="https://oclock.io/" title="Ouvir le site de l'école O'Clock">O'Clock - Projet Fin de Formation Développeur Web</a></h3>
                                     <h4>Développeur Web Back-end Symfony & Scrum Master</h4>
                                     <p class="text-muted"><small><span class="material-icons">
                                         room
@@ -403,8 +402,8 @@
                                         <li>100% télétravail.</li>
                                     </ul>
                                     <hr>
-                                    <p><a href="https://www.youtube.com/watch?t=8745&v=gI-UPLSyH98&feature=youtu.be&ab_channel=O%27clock" target="blank">Découvrir la rediffusion, sur Youtube, de la présentation au Jury</a></p>    
-                                    <p><a href="./Projets/CV-Milan-FORRAT/docs/GWITH -Cahier des Charges.pdf" target="blank">Télécharger le Cahier des Charges</a></p> 
+                                    <p><a href="https://www.youtube.com/watch?t=8745&v=gI-UPLSyH98&feature=youtu.be&ab_channel=O%27clock" title="Ouvrir la rediffusion de la présentation du projet" target="_blank" rel="noopener noreferrer">Découvrir la rediffusion, sur Youtube, de la présentation au Jury</a></p>    
+                                    <p><a href="./Projets/CV-Milan-FORRAT/docs/GWITH -Cahier des Charges.pdf" target="_blank" rel="noopener noreferrer" title="Ouvrir le cahier des charges au format PDF" >Télécharger le Cahier des Charges</a></p> 
                                 </div>
                             </div>
                         </div>
@@ -414,7 +413,7 @@
                         <div class="timeline-panel-container-inverted">
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h3><a target="blank" href="https://www.probikeshop.fr/">ProbikeShop</a></h3>
+                                    <h3><a target="_blank" rel="noopener noreferrer" href="https://www.probikeshop.fr/" title="Ouvrir le site de ProbikeShop">ProbikeShop</a></h3>
                                     <h4>Technicien Cycle et Opérateur BackOffice</h4>
                                     <p class="text-muted"><small><span class="material-icons">
                                         room
@@ -433,7 +432,7 @@
                                         <li>création de fiche de contenu.</li>
                                     </ul>
                                     <hr>
-                                    <p><a href="./Projets/CV-Milan-FORRAT/docs/Lettre de recommandation - M FORRAT -  Probikeshop.pdf" target="blank">Télécharger la lettre de recommandation</a></p>    
+                                    <p><a href="./Projets/CV-Milan-FORRAT/docs/Lettre de recommandation - M FORRAT -  Probikeshop.pdf" target="_blank" rel="noopener noreferrer" title="Ouvrir la lettre de recommandation au format PDF" >Télécharger la lettre de recommandation</a></p>    
                                 </div>
                             </div>
                         </div>
@@ -443,7 +442,7 @@
                         <div class="timeline-panel-container">  <!-- Inverted pour passer le bloc de l'autre côté-->
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h3><a target="blank" href="https://www.livraisonvelomontreal.com/">LVM Livraison Montréal</a></h3>
+                                    <h3><a target="_blank" rel="noopener noreferrer" href="https://www.livraisonvelomontreal.com/" title="Ouvrir le site de LVM Livraison Montréal">LVM Livraison Montréal</a></h3>
                                     <h4>Technicien Cycle</h4>
                                     <p class="text-muted"><small><span class="material-icons">
                                         room
@@ -469,7 +468,7 @@
                         <div class="timeline-panel-container-inverted">
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h3><a target="blank" href="https://www.gendarmerie.interieur.gouv.fr/">Gendarmerie Nationale</a></h3>
+                                    <h3><a target="_blank" rel="noopener noreferrer" href="https://www.gendarmerie.interieur.gouv.fr/" title="Ouvrir le site de la Gendarmerie Nationale">Gendarmerie Nationale</a></h3>
                                     <h4>Sous-Officier, Gendarmerie Mobile, Peloton d’Intervention</h4>
                                     <p class="text-muted"><small><span class="material-icons">
                                         room
@@ -492,7 +491,7 @@
                                         </ul>
                                     </p>
                                     <hr>
-                                    <p><a href="./Projets/CV-Milan-FORRAT/docs/Lettre de recommandation - M FORRAT - Gendarmerie Nationale.pdf" target="blank">Télécharger la lettre de recommandation</a></p>    
+                                    <p><a href="./Projets/CV-Milan-FORRAT/docs/Lettre de recommandation - M FORRAT - Gendarmerie Nationale.pdf" target="_blank" rel="noopener noreferrer" title="Ouvrir la lettre de recommandation au format PDF" >Télécharger la lettre de recommandation</a></p>    
                                 </div>
                             </div>
                         </div>
@@ -502,7 +501,7 @@
                         <div class="timeline-panel-container">
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h3><a target="blank" href="https://forfait.laclusaz.com/fr/">SATELC, Société d’Aménagement Touristique et d’Exploitation de La Clusaz</a></h3>
+                                    <h3><a target="_blank" rel="noopener noreferrer" href="https://forfait.laclusaz.com/fr/" title="Ouvrir le site de la SATELC">SATELC, Société d’Aménagement Touristique et d’Exploitation de La Clusaz</a></h3>
                                     <h4>Agent d’Exploitation des Remontées Mécaniques</h4>
                                     <p class="text-muted"><small><span class="material-icons">
                                         room
@@ -531,7 +530,7 @@
                         <div class="timeline-panel-container-inverted">
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h3><a target="blank" href="https://www.facebook.com/LEDclub/">LED, Boîte de Nuit</a></h3>
+                                    <h3><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/LEDclub/" title="Ouvrir la page Facebook du club LED">LED, Boîte de Nuit</a></h3>
                                     <h4>DJ, animateur de soirée</h4>
                                     <p class="text-muted"><small><span class="material-icons">
                                         room
@@ -549,7 +548,7 @@
                                          <br>
                                     </p>
                                     <hr>   
-                                    <p><a href="./Projets/CV-Milan-FORRAT/docs/Letter of recommendation - LED Club Bangkok.pdf" target="blank">Télécharger la lettre de recommandation (Anglais)</a></p>    
+                                    <p><a href="./Projets/CV-Milan-FORRAT/docs/Letter of recommendation - LED Club Bangkok.pdf" target="_blank" rel="noopener noreferrer" title="Ouvrir la lettre de recommandation au format PDF" >Télécharger la lettre de recommandation (Anglais)</a></p>    
                                 </div>
                             </div>
                         </div>
@@ -567,8 +566,8 @@
                 <h4>Sites professionnels :</h4>
                 <div class="row">
                     <article class="col-lg-6 col-xl-3">
-                        <a href="http://www.ahumbert-reflexologue.fr/" class="thumbnail" target="blank"
-                        ><img src="./Projets/CV-Milan-FORRAT/images/site-anne-humbert.png" alt="lien vers site">
+                        <a href="http://www.ahumbert-reflexologue.fr/" class="thumbnail" target="_blank" rel="noopener noreferrer" title="Ouvrir le site dans un nouvel onglet"
+                        ><img src="./Projets/CV-Milan-FORRAT/images/site-anne-humbert.png" alt="lien vers site de Réflexologie Plantaire">
                     </a>
                  </article>
                 </div>
@@ -577,22 +576,22 @@
                 <h6>Responsive :</h6>
                 <div class="row">
                 <article class="col-lg-6 col-xl-3">
-                    <a href="./Projets/Travel-Agency/index.html" class="thumbnail" target="blank">
+                    <a href="./Projets/Travel-Agency/index.html" class="thumbnail" target="_blank" rel="noopener noreferrer" title="Ouvrir le site dans un nouvel onglet" >
                         <img src="./Projets/CV-Milan-FORRAT/images/ocean.jpg" alt="lien vers site Travel Agency">
                     </a>
                 </article>
                 <article class="col-lg-6 col-xl-3">
-                    <a href="http://e-commerce.milan-forrat.com/public/" class="thumbnail" target="blank">
+                    <a href="http://e-commerce.milan-forrat.com/public/" class="thumbnail" target="_blank" rel="noopener noreferrer" title="Ouvrir le site dans un nouvel onglet" >
                         <img src="./Projets/CV-Milan-FORRAT/images/LaFringuerieFrancaise.png" alt="lien vers site E-commerce : Online~shop">
                     </a>
                 </article>
                 <article class="col-lg-6 col-xl-3">
-                    <a href="./Projets/ExcusesDeDev/index.html" class="thumbnail" target="blank">
+                    <a href="./Projets/ExcusesDeDev/index.html" class="thumbnail" target="_blank" rel="noopener noreferrer" title="Ouvrir le site dans un nouvel onglet" >
                         <img src="./Projets/CV-Milan-FORRAT/images/3.png" alt="lien vers site d'excercice en javascript">
                     </a>
                 </article>
                 <article class="col-lg-6 col-xl-3">
-                    <a href="./Projets/E-shop/public/index.html" class="thumbnail" target="blank">
+                    <a href="./Projets/E-shop/public/index.html" class="thumbnail" target="_blank" rel="noopener noreferrer" title="Ouvrir le site dans un nouvel onglet" >
                         <img src="./Projets/CV-Milan-FORRAT/images/E-shop.jpg" alt="lien vers site type e-commerce sur le vélo">
                     </a>
                 </article>
@@ -600,7 +599,7 @@
                 <h6 style="margin-top:1rem;">Uniquement avec clavier :</h6>
                 <div class="row">
                     <article class="col-lg-6 col-xl-3">
-                        <a href="./Projets/Snake-Js/index.html" class="thumbnail" target="blank">
+                        <a href="./Projets/Snake-Js/index.html" class="thumbnail" target="_blank" rel="noopener noreferrer"  title="Ouvrir le site dans un nouvel onglet" >
                             <img src="./Projets/CV-Milan-FORRAT/images/SnakeJS.png" alt="lien vers site permettant de jouer au Snake (uniquement sur ordinateur)">
                         </a>
                     </article>
@@ -623,29 +622,29 @@
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
                             <h3>"(..) rigoureux et respecte les processus de production (..)"<small class="small_italic">- ProbikeShop</small></h3>
-                            <h4><a class="recommandation_link"  href="./Projets/CV-Milan-FORRAT/docs/Lettre de recommandation - M FORRAT -  Probikeshop.pdf" target="blank"><span class="material-icons">
+                            <h4><a class="recommandation_link" title="Ouvrir la lettre de recommandation au format PDF" href="./Projets/CV-Milan-FORRAT/docs/Lettre de recommandation - M FORRAT -  Probikeshop.pdf" target="_blank" rel="noopener noreferrer"><span class="material-icons">
                                 add_circle_outline
                                 </span>Télécharger la lettre</a></h4>
                         </div>
                         <div class="carousel-item">
                             <h3>"(..) il démontre dès que l'occasion lui en est donnée une faculté d'adaptation avérée."<small class="small_italic">- Gendarmerie</small></h3>
-                            <h4><a class="recommandation_link" href="./Projets/CV-Milan-FORRAT/docs/Lettre de recommandation - M FORRAT - Gendarmerie Nationale.pdf" target="blank"><span class="material-icons">
+                            <h4><a class="recommandation_link" title="Ouvrir la lettre de recommandation au format PDF"  href="./Projets/CV-Milan-FORRAT/docs/Lettre de recommandation - M FORRAT - Gendarmerie Nationale.pdf" target="_blank" rel="noopener noreferrer"><span class="material-icons">
                                 add_circle_outline
                                 </span>Télécharger la lettre</a></h4>
                         </div>
                         <div class="carousel-item">
                             <h3>"(..) Milan possesses the determination and will that has allowed him to gain experience (..)"<small class="small_italic">- LED Club</small></h3>
-                            <h4><a class="recommandation_link"  href="./Projets/CV-Milan-FORRAT/docs/Letter of recommendation - LED Club Bangkok.pdf" target="blank"><span class="material-icons">
+                            <h4><a class="recommandation_link" title="Ouvrir la lettre de recommandation au format PDF" href="./Projets/CV-Milan-FORRAT/docs/Letter of recommendation - LED Club Bangkok.pdf" target="blank"><span class="material-icons">
                                 add_circle_outline
                                 </span>Télécharger la lettre</a></h4>
                         </div>
                     </div>
                     <br>
                     <br>
-                    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                    <a class="carousel-control-prev" href="#myCarousel" title="Précédant" role="button" data-slide="prev">
                         <span class="fas fa-chevron-left fa-2x"></span>
                       </a>
-                    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                    <a class="carousel-control-next" href="#myCarousel" title="Suivant" role="button" data-slide="next">
                         <span class="fas fa-chevron-right fa-2x"></span>
                     </a>
                 </div>
@@ -653,20 +652,17 @@
         </section>
         <!-- FOOTER -->
         <footer class="text-center">
-            <a href="#about">
+            <a href="#about" title="Remonter en haut de la page" >
                 <svg class="bi bi-arrow-up-square" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
                     <path fill-rule="evenodd" d="M4.646 8.354a.5.5 0 0 0 .708 0L8 5.707l2.646 2.647a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 0 .708z"/>
                     <path fill-rule="evenodd" d="M8 11.5a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-1 0v5a.5.5 0 0 0 .5.5z"/>
                   </svg>
             </a>
-            <h5>All rights reserved ~ <span id="author"><a href="https://www.linkedin.com/in/milan-forrat-09043925/" target="blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Profil LinkedIn">
+            <h5>All rights reserved ~ <span id="author"><a href="https://www.linkedin.com/in/milan-forrat-09043925/" title="Ouvrir le profil LinkedIn dans un nouvel onglet" target="blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Profil LinkedIn">
                Milan FORRAT</a></span></h5>
             <h5>Mis à jour le 17/03/2021</h5>
-    
-          </footer>
-    
-            
+        </footer>
             <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
