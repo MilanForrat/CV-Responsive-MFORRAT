@@ -142,6 +142,9 @@ header{
         margin-top: 20px;
     }
 }
+#heading-job-title{
+    font-size: 25px;
+}
 #about{
     padding-top: 100px;
     background: rgb(2,0,36);
