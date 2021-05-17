@@ -83,6 +83,9 @@ a:hover{
         display: flex;
         justify-content: center;
     }
+    nav .nav-item .nav-link, .navbar-nav button{
+        margin-left: 10px;
+    }
 }
 #about .btn{
     width: 190px;
