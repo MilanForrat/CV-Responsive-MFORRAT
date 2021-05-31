@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Squada+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Monoton', cursive;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+header{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 40px;
+}
+.container{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+p{
+    margin: 10px;
+    text-align: center;
+}
+h1{
+    text-transform: none;
+    font-family: 'Bangers', cursive;
+    text-shadow: 0 8px 5px black;
+    letter-spacing: .5rem;
+}
+footer{
+    font-family: 'Squada One', cursive;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    text-align: center;
+}
+
+/* Link animation */ 
+.slide-line{
+    text-decoration: none;
+    color: white;
+    /* on met un position relative pour avoir une référence pour ses enfants */
+    position: relative;
+    margin-left: 10px;
+    margin-bottom: 2px;
+}
+
+.slide-line::before{
+    /* on instancie un contenu vide */
+    content: "";
+    /* la position absolue de l'élément relatif */
+    position:absolute;
+    background-color: white;
+    width: 100%;
+    height: 3px;
+    bottom: -3px;
+    /* permet de placer le point de transformation - 100% sur x veut dire au bout de la ligne des X donc le E de explore */
+    /* rien n'empêche d'aller plus loin que 100%  */
+    transform-origin: 100% 0;
+    /* je demande à ma ligne de représenter 0% de ma ligne (donc elle disparait) */
+    transform: scaleX(0);
+    transition: transform 0.4s;
+}
+
+/* quand on va hover, alors la pseudo class before */
+.slide-line:hover::before{
+    /* je demande en hover à ma ligne de démarrer à gauche */
+    transform-origin: 0 0;
+    /* et de rejoindre la droite */
+    transform: scaleX(1);
+}
+
+
+/* Animation compte à rebours */ 
+.two-lines{
+    position: relative;
+}
+.two-lines::before, .two-lines::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: #333;
+    /* opacity 0 au départ pour qu'elles soient invisibles */
+    opacity: 0;
+    /* left 50% et translate -50% pour centrer parfaitement */
+    left: 50%;
+    transform: translate(-50%, 10px);
+    transition: all 1s ease-in-out;
+}
+.two-lines::before{
+    /* une ligne plus large que l'autre */
+    width: 90%;
+    bottom: -8px;
+}
+.two-lines::after{
+    /* une ligne plus petite que l'autre */
+    width: 60%;
+    bottom: -18px;
+}
+/* quand on va hover ... */
+.two-lines:hover::before, .two-lines:hover::after{
+    /* on redonne la visibilité aux élément en transition 0.2s */
+    opacity: 1;
+    /* on remonte les lignes grâce au 0px */
+    transform: translate(-50%, 0px);
+    background-color: rgb(143, 142, 142);
+}
