@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://dev-web.milan-forrat.com/sitemap.xml
+Sitemap: https://dev-web.milan-forrat.com/sitemap.xml
+
