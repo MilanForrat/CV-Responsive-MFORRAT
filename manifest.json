@@ -11,7 +11,7 @@
   "description": "Bienvenue sur le CV en ligne de Milan FORRAT - Développeur Web et Web Mobile.",
   "orientation": "any",
   "related_applications": [],
-  "prefer_related_applications": false,
+  "prefer_related_applications": true,
   "icons": [
     {
       "src": "https://dev-web.milan-forrat.com/images/favicon.png",
