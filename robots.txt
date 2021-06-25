@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://dev-web.milan-forrat.com/sitemap.xml
+
