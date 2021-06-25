@@ -14,9 +14,9 @@
   "prefer_related_applications": false,
   "icons": [
     {
-      "src": "https://dev-web.milan-forrat.com/Projets/CV-Milan-FORRAT/images/favicon.png",
+      "src": "https://dev-web.milan-forrat.com/images/favicon.png",
       "type": "image/png",
-      "sizes": "96x96"
+      "sizes": "144x144"
     }
   ],
   "screenshots": []
