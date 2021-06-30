@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Un petit projet JS sur la validation de donnée de formulaire">
+    <link rel="stylesheet" href="./styles.css">
+    <title>JS - Validation Form</title>
+</head>
+<body>
+    <form id="form">
+        <!-- le pattern permet de mettre du REGEX
+        ex: que des lettres minuscules : pattern="[a-z]+
+        ex : tous les chiffres de 0 à 9 : pattern="[0-9]"
+        le + à la fin permet d'autoriser la saisie de plusieurs caractères
+
+        on peut également demander un nombre minimum de caractères : 
+        ex : [0-9]{6,}            => ici on a que des chiffres et il faut au minimum 7 caract'
+         pattern="[0-9]+"
+        -->
+        <div class="form-elements">
+            <label for="username"><strong>Nom d'utilisateur :</strong></label>
+            <input type="text" autocomplete="off" id="input-username" name="username" placeholder="Saisissez votre identifiant..." required>
+            <p id="indication-username">e <br> e</p>
+            <label for="password"><strong>Mot de passe :</strong></label>
+            <input type="password" id="input-password" name="password" placeholder="Saisissez votre mot de passe..." required>
+            <p id="indication-password">e <br>e</p>
+        </div>
+        <button type="submit" id="submit-btn">Valider</button>
+        <p id="submit-btn-indication">e</p>
+    </form>
+    <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 30px 40px;
+}
+div, h1, h2{
+    margin: 15px;
+}
+li{
+    margin: 15px 0 15px 45px;
+}
+.GoogleMapsPerso, .fb-like, .youtube_player{
+    display: flex !important;
+    justify-content: center;
+}
+a{
+    transition: all 0.7s;
+    text-decoration: none;
+    color: rgb(51, 90, 175);
+
+}
+a:hover{
+    transition: all 0.7s;
+    color: rgb(160, 21, 21);
+}
