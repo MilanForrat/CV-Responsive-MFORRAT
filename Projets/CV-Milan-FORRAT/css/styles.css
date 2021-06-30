@@ -262,8 +262,9 @@ h3 .btn{
     font-size: 20px;
 }
 .timeline-heading h4{
-    color: #d82c2e;
+    color: #c52427;
     font-size: 1rem;
+    font-weight: 600;
 }
 .list-style{
     list-style: inside;
